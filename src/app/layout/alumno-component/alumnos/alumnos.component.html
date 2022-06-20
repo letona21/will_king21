@@ -1,0 +1,64 @@
+<div class="container mt-4">
+    <div class="row">
+      <div id="survey-form">
+          <div id="survey-form">
+            <h1>LISTA DE MATRICULADOS </h1> <!-- routerLink="/createAlumno  (click)="nuevoAlumno()"" -->
+            <h3>"ESCUELA DE POLICIAS"</h3>
+            <button class="btn btn-success btn-lg float-right mb-4" (click)="nuevoAlumno()">AGREGAR</button>
+
+            <table class="table  table-bordered table-striped mt-5">
+                <thead class="cabezera text-center">
+                  <tr >
+                    <th scope="col" >ID</th>
+                    <th scope="col"><i class="fa fa-address-book-o" aria-hidden="true"></i> NOMBRES</th>
+                    <th scope="col"><i class="fa fa-address-book-o" aria-hidden="true"></i> APELLIDOS</th>
+                    <!-- <th scope="col">APELLLIDO MATERNO</th> --> 
+                    <!-- <th scope="col">SEXO</th> -->
+                    <th scope="col"><i class="fa fa-address-card" aria-hidden="true"></i> DNI</th>
+                    <!-- <th scope="col">FECHA DE NACIMIENTO</th> -->
+                    <th scope="col"><i class="fa fa-mobile" aria-hidden="true"></i> CELULAR</th>
+                    <th scope="col"><i class="fa fa-envelope" aria-hidden="true"></i> EMAIL</th>
+                    <!-- <th scope="col">DATOS DEL PADRE</th>
+                    <th scope="col">DATOS DE LA MADRE</th> -->
+                    <th scope="col"><i class="fa fa-location-arrow" aria-hidden="true"></i> DIRECCION</th>
+                    <th scope="col"><i class="fa fa-user-circle" aria-hidden="true"></i> FOTO</th>
+                    <th> ACCIONES</th>
+                  </tr>
+                </thead>
+                <tbody style="font-size: 10px;text-align: center;">
+                  <tr *ngFor="let alumno of alumnos ; let id=index " (click)="editarAlumno(alumno.id)">
+                    <th scope="row">{{id+1}}</th>
+                   
+                    <td>{{alumno.nombres}}</td>
+                    <td> {{alumno.apellidoPaterno}} {{alumno.apellidoMaterno}}  </td>
+                    <!-- <td>{{alumno.apellidoMaterno}}</td -->
+                   <!--  <td>{{alumno.sexo}}</td> -->
+                    <td>{{alumno.dni}}</td>
+                   <!--  <td>{{alumno.fechaNacimiento}}</td> -->
+                    <td>{{alumno.celular}}</td>
+                    <td>{{alumno.email}}</td>
+                   <!--  <td>{{alumno.datosDelPadre}}</td>
+                    <td>{{alumno.datosDelaMadre}}</td> -->
+                    <td>{{alumno.direccion}}</td>
+                    <td><img [src]="alumno?.imagen" style="height: 50px;"></td>
+                    <td >  
+                      <i class="fa fa-pencil-square-o fa-3x text-info mr-2 "></i>
+                      <i class="fa fa-trash fa-3x text-danger "></i>
+                     </td>
+              </tr>
+                 
+                  
+                </tbody>
+              </table>
+          </div>
+       
+      </div>
+    <div class="row">
+    
+        
+    
+      </div>
+    
+    </div>
+    </div>
+   
